@@ -20,7 +20,14 @@ pip install django twilio
 ```
 # Configuration
 
- - Add Twilio credentials to Django settings:
+ - Add Twilio credentials to Django .env file and use it in settings.py
+ - import from decouple import config
+ - and then put in settings.py
+ - TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = config('TWILIO_AUTH_TOKEN')
+TWILIO_PHONE_NUMBER = config('TWILIO_PHONE_NUMBER')
+
+:
 
  ```rb
 TWILIO_ACCOUNT_SID = 'your_account_sid'
